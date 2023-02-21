@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Landing page</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .split {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 50px;
+      width: 50%;
+      color: #fff;
+      height: 100vh;
+      position: relative;
+      transition: width 1s ease-in-out;
+    }
+    .split.left {
+      background: url(./left-bg.jpg) no-repeat center/cover;
+    }
+
+    .split.right {
+      background: url(./right-bg.jpg) no-repeat center/cover;
+      color: #000;
+    }
+
+    .btn {
+      color: #fff;
+      border: 3px solid #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      padding: 15px 50px;
+      display: inline-block;
+      background: transparent;
+    }
+    .split.left .btn:hover {
+      background-color: rgb(105, 94, 100);
+      border-color: rgb(105, 94, 100);
+    }
+    .split.right .btn:hover {
+      background-color: rgba(190, 15, 23, 1);
+      border-color: rgba(190, 15, 23, 1);
+    }
+    .hover-left .left {
+      width: 75%;
+    }
+    .hover-left .right {
+      width: 25%;
+    }
+    .hover-right .right {
+      width: 75%;
+    }
+    .hover-right .left {
+      width: 25%;
+    }
+  </style>
+  <body>
+    <section class="page">
+      <div class="container">
+        <div class="split left">
+          <h1>Wolvriene</h1>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="split right">
+          <h1>Punisher</h1>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+    </section>
+    <img
+      style="width: 135px"
+      src="/wp-content/uploads/2022/11/header-apple.png"
+      alt="Apple Store"
+    />
+    <script src="script.js"></script>
+  </body>
+</html>

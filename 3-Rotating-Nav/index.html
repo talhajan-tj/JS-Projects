@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      position: relative;
+      background: rgba(0, 0, 0, 0.623);
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 50px;
+      transform-origin: top left;
+      transition: transform 0.5s linear;
+      min-width: 100vw;
+      min-height: 100vh;
+    }
+    .container.active {
+      transform: rotate(-20deg);
+    }
+    .nav-box {
+      background: #ef9322a3;
+      width: 200px;
+      height: 200px;
+      position: fixed;
+      top: -100px;
+      left: -100px;
+      border-radius: 100%;
+    }
+    .circle-container {
+      position: relative;
+      transition: transform 0.5s linear;
+    }
+    .container.active .circle-container {
+      transform: rotate(-30deg);
+    }
+    .circle-container button {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      height: 100px;
+      background: transparent;
+      color: #fff;
+      border: 0;
+      font-size: 26px;
+      cursor: pointer;
+    }
+    .circle-container button:focus {
+      outline: none;
+    }
+    .circle-container button#open {
+      left: 120px;
+    }
+    .circle-container button#close {
+      top: 120px;
+      transform: rotate(90deg);
+      transform-origin: top left;
+    }
+    .blog {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .blog img {
+      max-width: 400px;
+    }
+    .container.active + nav li {
+      transform: translateX(0);
+      transition-delay: 0.3s;
+    }
+    nav {
+      position: fixed;
+      bottom: 40px;
+      left: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style-type: none;
+      padding-left: 30px;
+    }
+    nav ul li {
+      text-transform: uppercase;
+      color: #fff;
+      margin: 20px 0;
+      transform: translateX(-100%);
+      transition: transform 0.4s ease-in;
+    }
+    nav ul li + li {
+      margin-left: 15px;
+      transform: translateX(-150%);
+    }
+    nav ul li + li + li {
+      margin-left: 30px;
+      transform: translateX(-200%);
+    }
+    nav ul li i {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="nav-box">
+        <div class="circle-container">
+          <button id="open">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+          </button>
+          <button id="close">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="blog">
+        <h1>This is Test Blog</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe porro
+          accusamus mollitia fugiat quisquam, cupiditate vero, omnis
+          consequuntur harum totam consequatur animi commodi magni assumenda
+          dignissimos id enim corporis non.
+        </p>
+        <img src="green.jpg" alt="Green" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          officiis, laboriosam voluptatem ad quos quibusdam odio non
+          perspiciatis a. Praesentium quisquam aliquid similique maxime saepe
+          voluptatem, eius modi autem a!
+        </p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><i class="fa-sharp fa-solid fa-house"></i>Home</li>
+        <li><i class="fa-sharp fa-solid fa-user"></i>About Us</li>
+        <li><i class="fa-sharp fa-solid fa-envelope"></i>Contct</li>
+      </ul>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>

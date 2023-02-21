@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #eee;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.faq-container {
+  margin: 30px 0;
+}
+.faq {
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #eee;
+  margin: 15px 0;
+  width: 500px;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.faq.active::before {
+  content: "\f086";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  left: -5px;
+  top: -20px;
+  z-index: -1;
+  font-size: 5rem;
+  font-weight: 400;
+  color: rgb(4, 128, 243);
+  opacity: 0.1;
+}
+.faq span {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  background-color: #000;
+  width: 15px;
+  height: 2px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.faq span:last-child {
+  transform: rotate(90deg);
+}
+.faq.active span {
+  transform: rotate(-135deg);
+}
+.faq.active span:last-child {
+  transform: rotate(320deg);
+}
+.faq p {
+  display: none;
+}
+.faq.active {
+  background-color: #fff;
+}
+.faq.active p {
+  display: block;
+  margin: 10px 0 0;
+}

@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(5, 105, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.joke-sect {
+  background-color: #fff;
+  padding: 50px 20px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.joke-sect p {
+  color: #8c8c8c;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.joke {
+  color: #000;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+.btn {
+  background-color: #6d05f5;
+  padding: 10px 30px;
+  border: 0;
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.btn:focus {
+  outline: 0;
+}

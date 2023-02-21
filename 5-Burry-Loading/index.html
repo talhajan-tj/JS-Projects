@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Blurry Loading</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    .bg {
+      background: url("./bg.jpg") no-repeat center/cover;
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      width: calc(100vw + 60px);
+      height: calc(100vh + 60px);
+      filter: blur(0px);
+      z-index: -1;
+    }
+    .load {
+      color: #fff;
+      font-size: 26px;
+    }
+  </style>
+  <body>
+    <section class="bg"></section>
+    <div class="load">0%</div>
+    <script src="script.js"></script>
+  </body>
+</html>

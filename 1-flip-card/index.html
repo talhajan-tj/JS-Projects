@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cards {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        color: #fff;
+        width: 90vw;
+      }
+      @media (max-width: 425px) {
+        .cards {
+          width: 100vw;
+        }
+        .card:nth-of-type(4),
+        .card:nth-of-type(5) {
+          display: none;
+        }
+      }
+      .card {
+        width: 100px;
+        height: 400px;
+        border-radius: 10px;
+        background: url("nat.jpg") center/cover no-repeat;
+        cursor: pointer;
+        flex: 0.5;
+        transition: flex 0.7s ease-in;
+      }
+      .card h2 {
+        opacity: 0;
+      }
+      .card.expand {
+        flex: 5;
+      }
+      .card.expand h2 {
+        opacity: 1;
+        transition: opacity 0.3s ease-in 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <div class="card expand">
+        <h2>Card 1</h2>
+      </div>
+      <div class="card">
+        <h2>Card 2</h2>
+      </div>
+      <div class="card">
+        <h2>Card 3</h2>
+      </div>
+      <div class="card">
+        <h2>Card 4</h2>
+      </div>
+      <div class="card">
+        <h2>Card 5</h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

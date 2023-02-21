@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(4, 149, 245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.wave {
+  background-color: rgb(4, 61, 248);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+.wave h2 {
+  text-align: center;
+  color: rgb(211, 238, 248);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 0;
+  position: relative;
+}
+
+input#email,
+input#password {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(211, 238, 248);
+  color: rgb(211, 238, 248);
+}
+.field input:focus,
+.field input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+.field label {
+  color: rgb(211, 238, 248);
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+input[type="button"] {
+  width: 100%;
+  margin: 25px 0;
+  padding: 10px 15px;
+  background-color: rgb(211, 238, 248);
+  color: rgb(4, 61, 248);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+input[type="button"]:active {
+  transform: scale(0.9);
+}
+.wave p {
+  color: rgb(211, 238, 248);
+}
+.wave a {
+  color: rgb(4, 149, 245);
+  text-decoration: none;
+}
+
+.field label span {
+  display: inline-block;
+  min-width: 5px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.field input:focus + label span,
+.field input:valid + label span {
+  transform: translateY(-30px);
+  color: lightblue;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Scroll Animation</title>
+  </head>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px 15px;
+      text-align: center;
+    }
+    .box {
+      max-width: 300px;
+      margin: 15px auto;
+      background-color: rgba(12, 12, 48, 0.856);
+      color: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+      transform: translateX(400%);
+      transition: transform 0.5s ease-in;
+    }
+    .box:nth-of-type(even) {
+      transform: translateX(-400%);
+    }
+    .box.show {
+      transform: translateX(0);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2>Scroll Animation Stuff</h2>
+      <div class="box">Content 1</div>
+      <div class="box">Content 2</div>
+      <div class="box">Content 3</div>
+      <div class="box">Content 4</div>
+      <div class="box">Content 5</div>
+      <div class="box">Content 6</div>
+      <div class="box">Content 7</div>
+      <div class="box">Content 8</div>
+      <div class="box">Content 9</div>
+      <div class="box">Content 10</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
