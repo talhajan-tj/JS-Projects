@@ -24,14 +24,19 @@ header {
   outline: none;
   color: #fff;
 }
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
 ::placeholder {
-  color: #999797;
+  color: #7378c5;
 }
 
 .main {
   display: flex;
   gap: 10px;
   padding: 30px 15px;
+  flex-wrap: wrap;
 }
 
 img {
@@ -40,4 +45,43 @@ img {
 }
 .movie {
   background-color: var(--secondary-color);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.movie-info {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.overview {
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  color: #000;
+  max-height: 100%;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+}
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 5px;
+  border-radius: 5px;
+}
+span.green {
+  color: lightgreen;
+}
+span.orange {
+  color: orange;
+}
+span.red {
+  color: red;
 }
