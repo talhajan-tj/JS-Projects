@@ -12,9 +12,12 @@ body {
 }
 header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: var(--secondary-color);
   padding: 15px;
+}
+h2 {
+  color: #fff;
 }
 .search {
   padding: 10px;
@@ -34,9 +37,10 @@ header {
 
 .main {
   display: flex;
-  gap: 10px;
+  justify-content: center;
   padding: 30px 15px;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 img {
@@ -50,6 +54,7 @@ img {
   overflow: hidden;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  width: 300px;
 }
 .movie-info {
   padding: 15px;
