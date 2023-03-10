@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap");
 :root {
-  --primary-color: #22254b;
-  --secondary-color: #373b69;
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+html {
+  transition: all 0.5s ease-in-out;
+}
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
 }
 * {
   box-sizing: border-box;
@@ -8,10 +20,71 @@
   margin: 0;
 }
 body {
+  font-family: "Heebo", sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   position: relative;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  cursor: pointer;
+  transform: translateX(-50%);
+}
+.toggle:focus {
+  outline: none;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.clock {
+  background-color: #eee;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.needle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: var(--primary-color);
+  width: 3px;
+  height: 65px;
+  transform-origin: bottom center;
+}
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: #e74c3c;
+}
+.center-point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #111;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  z-index: -1;
 }
