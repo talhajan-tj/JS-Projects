@@ -5,15 +5,16 @@ const timeEl = document.querySelector(".time");
 const dateEl = document.querySelector(".date");
 const toggle = document.querySelector(".toggle");
 const html = document.querySelector("html");
+const dateInNumber = document.querySelector(".circle");
 
 const days = [
+  "Sunday",
   "monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 const months = [
   "Jan",
@@ -42,13 +43,23 @@ toggle.addEventListener("click", (e) => {
 });
 
 // Time Show
-const now = new Date();
-const hour = now.getHours();
-const minute = now.getMinutes();
-console.log(now);
-timeEl.innerHTML = `${hour}:${minute}`;
+setInterval(repeat, 1000);
 
-const day = now.getDay();
-const month = now.getMonth();
-// const day = now.getDay();
-dateEl.innerHTML = `${day}, ${month}`;
+function repeat() {
+  const now = new Date();
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  const second = now.getSeconds();
+  timeEl.innerHTML = `${hour}:${minute < 10 ? `0${minute}` : minute}`;
+
+  const dayOfWeek = now.getDay();
+  const month = now.getMonth();
+  const dayOfMonth = now.getDate();
+
+  dateEl.innerHTML = `${days[dayOfWeek]}, ${months[month]} <span class="circle">${dayOfMonth}</span>`;
+
+  // Clock Needles
+  hourEl.style.transform = `translate(-50%, -100%) rotate(${hour * 30}deg)`;
+  minuteEl.style.transform = `translate(-50%, -100%) rotate(${minute * 6}deg)`;
+  secondEl.style.transform = `translate(-50%, -100%) rotate(${second * 6}deg)`;
+}
