@@ -49,9 +49,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 .clock {
-  background-color: #eee;
   width: 200px;
   height: 200px;
   position: relative;
@@ -82,9 +82,42 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #111;
-  width: 7px;
-  height: 7px;
+  background-color: #e74c3c;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  z-index: -1;
+}
+.center-point::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 60px;
+}
+.date {
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 18px;
+  transition: all 0.5s ease-in;
 }
