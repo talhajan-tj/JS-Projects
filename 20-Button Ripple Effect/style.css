@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap");
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+html {
+  transition: all 0.5s ease-in-out;
+}
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Heebo", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  background-color: #333;
+}
+button {
+  position: relative;
+  background-color: purple;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 1;
+  animation: circle 0.5s linear;
+}
+
+@keyframes circle {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+    background-color: #fff;
+  }
+}
