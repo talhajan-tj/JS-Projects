@@ -12,20 +12,23 @@ for (const empty of empties) {
 }
 
 function dragStart() {
-  console.log("drag start");
+  this.className += " hold";
+  setTimeout(() => (this.className = "invisible"), 0);
 }
 function dragEnd() {
-  console.log("drag End");
+  this.className = "fill";
 }
-function dragEnter() {
-  console.log("drag Enter");
+function dragOver(e) {
+  e.preventDefault();
+}
+function dragEnter(e) {
+  e.preventDefault();
+  this.className += " hovered";
 }
 function dragLeave() {
-  console.log("drag Leave");
-}
-function dragOver() {
-  console.log("drag Over");
+  this.className = "empty";
 }
 function dragDrop() {
-  console.log("drag drop");
+  this.className = "empty";
+  this.append(fill);
 }
