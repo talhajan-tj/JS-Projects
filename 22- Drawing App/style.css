@@ -23,7 +23,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
   position: relative;
+}
+canvas {
+  border: 2px solid steelblue;
+}
+.tools {
   background-color: steelblue;
+  width: 704px;
+  display: flex;
+  border: 1px solid slateblue;
+  padding: 15px;
+}
+.tools > * {
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  font-size: 22px;
+  margin: 3px;
+  padding: 3px;
+  cursor: pointer;
+}
+.tools > *:last-child {
+  margin-left: auto;
 }
