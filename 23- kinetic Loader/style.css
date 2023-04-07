@@ -25,5 +25,41 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  background-color: darkblue;
+}
+.kinetic {
   position: relative;
+  width: 80px;
+  height: 80px;
+}
+.kinetic::before,
+.kinetic::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top-color: #fff;
+  animation: rotate 2s linear infinite;
+}
+.kinetic::after {
+  border-top-color: transparent;
+  border-bottom-color: #fff;
+  animation-delay: 2s;
+}
+
+@keyframes rotate {
+  0%,
+  25% {
+    transform: rotate(0deg);
+  }
+  50%,
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
