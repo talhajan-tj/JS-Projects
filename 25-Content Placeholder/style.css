@@ -26,3 +26,16 @@ body {
   background-color: rgb(13, 13, 36);
   position: relative;
 }
+
+.card {
+  background-color: #fff;
+  max-width: 500px;
+  border-radius: 5px;
+}
+.img,
+.ingo-img,
+h3,
+h4,
+p {
+  background-color: #333c;
+}
