@@ -31,14 +31,14 @@ body {
   position: relative;
 }
 
-.card {
+.animate-active {
   background-color: #fff;
   max-width: 350px;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
-.card:before {
+.animate-active:before {
   content: "";
   position: absolute;
   width: 3%;
@@ -81,7 +81,7 @@ p {
   opacity: 0;
 }
 .content {
-  padding: 20px;
+  padding: 50px 20px 20px;
 }
 h3,
 h4 {
