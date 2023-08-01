@@ -63,23 +63,22 @@ body {
 }
 .img,
 .info-img,
-h3,
-h4,
-p {
+.animate-active h3,
+.animate-active h4,
+.animate-active p {
   background-color: #33333330;
   border-radius: 30px;
-}
-h3,
-h4,
-p {
   color: transparent;
 }
+
 .img {
   border-radius: 0;
 }
 .img img {
   max-width: 100%;
   border-radius: 5px 5px 0 0;
+}
+.animate-active img {
   opacity: 0;
 }
 .content {
@@ -101,5 +100,4 @@ h4 {
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  opacity: 0;
 }
