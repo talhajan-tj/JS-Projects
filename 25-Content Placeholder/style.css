@@ -31,14 +31,14 @@ body {
   position: relative;
 }
 
-.animate-active {
+.card {
   background-color: #fff;
   max-width: 350px;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
-.animate-active:before {
+.card:before {
   content: "";
   position: absolute;
   width: 3%;
@@ -48,7 +48,9 @@ body {
   background-color: #fff;
   transform: translateX(-400px);
   transition: all 0.5s;
-  animation: slide 3s infinite ease-in-out;
+}
+.animate-active.card:before {
+  animation: slide 2s infinite ease-in-out;
 }
 
 @keyframes slide {
