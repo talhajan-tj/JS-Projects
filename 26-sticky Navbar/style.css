@@ -22,11 +22,90 @@ img {
   height: auto;
 }
 body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
   display: flex;
   align-items: center;
+}
+h1,
+h2 {
+  margin-bottom: 15px;
+  font-size: 42px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #fff;
+}
+h2 {
+  color: #000;
+  font-size: 34px;
+}
+p {
+  font-size: 18px;
+  line-height: 1.2;
+}
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 0;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header .container {
+  justify-content: space-between;
+}
+header.active {
+  background-color: #fff;
+  color: #000;
+  padding: 7px 0;
+}
+header.active a {
+  color: #000;
+}
+
+header span {
+  font-size: 32px;
+  line-height: 1.2;
+}
+header.active span {
+  font-size: 28px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul li {
+  list-style: none;
+}
+nav ul a:hover li,
+nav ul a:active li {
+  color: red;
+}
+
+.banner {
+  background: url(./laptop-banner.jpg) center/cover no-repeat;
+  min-height: 400px;
+  text-align: center;
+  display: flex;
+  color: #fff;
+}
+.banner .container {
   justify-content: center;
+}
+.blog {
+  padding: 40px 0;
+  text-align: left;
+}
+.blog .container {
   flex-direction: column;
-  height: 100vh;
-  background-color: rgb(13, 13, 36);
-  position: relative;
+  align-items: flex-start;
+  gap: 40px;
 }
