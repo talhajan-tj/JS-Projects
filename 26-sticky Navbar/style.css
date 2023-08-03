@@ -95,9 +95,37 @@ nav ul a:active li {
 .mob-bar {
   display: none;
 }
+.mob-bar span {
+  display: inline-block;
+  width: 25px;
+  height: 1px;
+  background-color: #fff;
+}
 @media (max-width: 767px) {
   header span {
     font-size: 22px;
+  }
+  .mob-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  nav {
+    position: relative;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul.open-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 33px;
+    right: -16px;
+    padding: 10px 20px;
+    background-color: #000;
   }
 }
 
