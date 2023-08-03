@@ -92,6 +92,14 @@ nav ul a:hover li,
 nav ul a:active li {
   color: red;
 }
+.mob-bar {
+  display: none;
+}
+@media (max-width: 767px) {
+  header span {
+    font-size: 22px;
+  }
+}
 
 .banner {
   background: url(./laptop-banner.jpg) center/cover no-repeat;
