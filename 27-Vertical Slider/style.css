@@ -19,6 +19,7 @@ html.dark {
 }
 img {
   display: block;
+  width: 100%;
   height: auto;
 }
 body {
@@ -48,4 +49,30 @@ h2 {
 p {
   font-size: 18px;
   line-height: 1.2;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+}
+.slider-text,
+.slider-img {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+}
+button {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.slider-text button {
+  right: 0;
+  top: 58%;
+}
+.slider-img button {
+  left: 0;
 }
