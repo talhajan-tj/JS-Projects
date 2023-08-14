@@ -61,6 +61,7 @@ p {
   top: 0;
   width: 35%;
   height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 .slide-left > div {
   width: 100%;
@@ -75,6 +76,7 @@ p {
   left: 35%;
   width: 65%;
   height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide-right > div {
