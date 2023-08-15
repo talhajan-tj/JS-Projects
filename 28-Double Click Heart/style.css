@@ -25,6 +25,10 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 .container {
   max-width: 1200px;
@@ -48,4 +52,23 @@ h2 {
 p {
   font-size: 18px;
   line-height: 1.2;
+}
+
+.box {
+  max-width: 350px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.box img {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.like-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
 }
