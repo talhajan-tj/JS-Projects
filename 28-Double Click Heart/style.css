@@ -60,6 +60,7 @@ p {
   padding: 15px;
   border: 1px solid #eee;
   border-radius: 8px;
+  cursor: pointer;
 }
 .box img {
   width: 300px;
@@ -70,5 +71,62 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 15px;
+  margin: 15px 15px 0;
+}
+.heart {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  background-color: red;
+}
+.like-box div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.likes {
+  font-size: 22px;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: red;
+}
+.heart::before {
+  left: -10px;
+}
+.heart::after {
+  top: -10px;
+}
+.clicked {
+  transition: transform 1s ease-in-out;
+  animation: click 1s linear;
+}
+@keyframes click {
+  0% {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(45deg) scale(1.5);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(45deg) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
 }
