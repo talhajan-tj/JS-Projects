@@ -115,9 +115,21 @@ p {
   position: absolute;
   width: 30px;
   height: 30px;
-  left: 0;
-  top: 0;
   transform: scale(0);
+  transition: transform 1s ease-in-out;
+}
+.box .fa-heart.active {
+  animation: show-heart 1s linear;
+}
+@keyframes show-heart {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 @keyframes click {
   0% {
