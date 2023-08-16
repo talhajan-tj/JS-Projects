@@ -108,6 +108,17 @@ p {
   transition: transform 1s ease-in-out;
   animation: click 1s linear;
 }
+.box figure {
+  position: relative;
+}
+.box .fa-heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  transform: scale(0);
+}
 @keyframes click {
   0% {
     transform: rotate(45deg) scale(1);
