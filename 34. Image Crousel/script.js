@@ -19,3 +19,20 @@ function imageChange() {
   }
   imgEl.style.transform = `translateX(-${idx * 500}px)`;
 }
+
+function reset() {
+  clearInterval(interval);
+  interval = setInterval(run, 2000);
+}
+
+prev.addEventListener("click", () => {
+  idx--;
+  imageChange();
+  reset();
+});
+
+next.addEventListener("click", () => {
+  idx++;
+  imageChange();
+  reset();
+});
