@@ -55,3 +55,37 @@ img {
   height: 500px;
   object-fit: cover;
 }
+.container {
+  border-radius: 5px;
+  border: 3px solid #111;
+  padding: 15px;
+  text-align: center;
+}
+.input-container {
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code {
+  font-size: 70px;
+  text-align: center;
+  height: 120px;
+  width: 100px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin: 1%;
+  font-weight: 300;
+}
+
+.code::-webkit-inner-spin-button,
+.code::-webkit-outter-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code:valid {
+  border-color: #3498db;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}
