@@ -100,3 +100,15 @@ input:focus {
 .user-list .user-info h4 {
   margin: 0 0 0 10px;
 }
+.user-list .user-info h4 {
+  margin: 0 0 10px 0;
+}
+.user-list .user-info p {
+  font-size: 12px;
+}
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.user-list li.hide {
+  display: none;
+}
